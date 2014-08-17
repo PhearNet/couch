@@ -4,8 +4,10 @@ python:
 install:
   - lsb_release -a
   - sudo apt-get update && sudo apt-get install linux-headers-generic
-  - sudo apt-get install ruby virtualbox vagrant
+  - sudo apt-get install ruby virtualbox
   - VBoxManage -v
+  - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_i686.deb
+  - sudo dpkg -i vagrant_1.6.3_i686.deb
 script:
   - which vagrant
   - vagrant up
