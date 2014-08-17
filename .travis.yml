@@ -3,11 +3,10 @@ python:
   - "2.6"
 install:
   - lsb_release -a
-  - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
-  - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
   - sudo apt-get update
   - sudo apt-get -y install linux-headers-generic
-  - sudo apt-get -y install virtualbox-4.0
+  - wget http://download.virtualbox.org/virtualbox/4.1.34/virtualbox-4.1_4.1.34-95024~Ubuntu~precise_i386.deb
+  - sudo dpkg - virtualbox-4.1_4.1.34-95024~Ubuntu~precise_i386.deb
   - sudo apt-get install ruby vagrant
   - VBoxManage -v
 script:
