@@ -6,7 +6,7 @@ install:
   - sudo apt-get update
   - sudo apt-get -y install linux-headers-generic
   - ls
-  - sudo ./virtualbox.sh
+  - sudo bash virtualbox.sh
   - sudo apt-get install ruby vagrant
   - VBoxManage -v
 script:
