@@ -3,7 +3,7 @@ python:
   - "2.6"
 install:
   - lsb_release -a
-  - sudo apt-get update && sudo apt-get install linux-headers-.
+  - sudo apt-get update && sudo apt-get install linux-headers-$(uname -r)-generic
   - sudo apt-get install ruby virtualbox vagrant
   - VBoxManage -v
 script:
