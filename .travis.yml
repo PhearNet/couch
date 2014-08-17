@@ -2,16 +2,16 @@ language: python
 python:
   - "2.6"
 install:
-  - sudo echo "deb http://download.virtualbox.org/virtualbox/debian precise contrib" | sudo tee -a /etc/apt/sources.list
-  - wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-  - sudo apt-get update
-  - sudo apt-get -y install virtualbox-4.2
+  - lsb_release -a
+  - sudo apt-get update && sudo apt-get install ruby
+  - wget http://download.virtualbox.org/virtualbox/4.3.14/virtualbox-4.3_4.3.14-95030~Ubuntu~precise_i386.deb
+  - sudo dpkg -i virtualbox-4.3_4.3.14-95030~Ubuntu~precise_i386.deb
   - VBoxManage -v
   - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_i686.deb
   - sudo dpkg -i vagrant_1.6.3_i686.deb
 script:
   - which vagrant
-  - /opt/vagrant/bin/vagrant up
+  - vagrant up
   - ls
-  - /opt/vagrant/bin/vagrant ssh --command "touch /vagrant/smash_it_with_a_hammer"
+  - vagrant ssh --command "touch /vagrant/smash_it_with_a_hammer"
   - ls
