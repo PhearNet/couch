@@ -6,7 +6,7 @@ install:
   - sudo apt-get update && sudo apt-get install linux-headers-generic
   - sudo apt-get install virtualbox ruby1.9.1
   - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_i686.deb
-  - dpkg -i vagrant_1.6.3_i686.deb
+  - sudo dpkg -i vagrant_1.6.3_i686.deb
   - VBoxManage -v
 script:
   - which vagrant
