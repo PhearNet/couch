@@ -10,6 +10,7 @@ install:
   - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_i686.deb
   - sudo dpkg -i vagrant_1.6.3_i686.deb
 script:
+  - which vagrant
   - /opt/vagrant/bin/vagrant up
   - ls
   - /opt/vagrant/bin/vagrant ssh --command "touch /vagrant/smash_it_with_a_hammer"
