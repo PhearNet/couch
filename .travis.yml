@@ -8,7 +8,7 @@ install:
   - ls
   - sudo apt-get install ruby virtualbox
   - VBoxManage -v
-  - wget http://files.vagrantup.com/packages/64e360814c3ad960d810456add977fd4c7d47ce6/vagrant_i686.deb
+  - wget http://files.vagrantup.com/packages/1e2d92d0ed73e28346bb74345c8e353bcab415fb/vagrant_i686.deb
   - sudo dpkg -i vagrant_i686.deb
 script:
   - which vagrant
