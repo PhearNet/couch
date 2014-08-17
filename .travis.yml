@@ -4,10 +4,8 @@ python:
 install:
   - lsb_release -a
   - sudo apt-get update && sudo apt-get install linux-headers-generic
-  - sudo apt-get install virtualbox ruby1.9.1
+  - sudo apt-get install virtualbox ruby1.9.1 vagrant
   - VBoxManage -v
-  - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_i686.deb
-  - sudo dpkg -i vagrant_1.6.3_i686.deb
 script:
   - which vagrant
   - rvm use system --default
