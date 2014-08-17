@@ -6,7 +6,7 @@ install:
   - sudo apt-get update
   - sudo apt-get -y install linux-headers-generic
   - ls
-  - sudo apt-get install ruby virtualbox
+  - sudo apt-get install virtualbox-ose virtualbox-ose-dkms
   - VBoxManage -v
   - wget http://files.vagrantup.com/packages/1e2d92d0ed73e28346bb74345c8e353bcab415fb/vagrant_x86_64.deb
   - sudo dpkg -i vagrant_x86_64.deb
