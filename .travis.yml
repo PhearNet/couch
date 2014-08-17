@@ -8,8 +8,8 @@ install:
   - ls
   - sudo apt-get install ruby virtualbox
   - VBoxManage -v
-  - wget http://files.vagrantup.com/packages/0ac2a87388419b989c3c0d0318cc97df3b0ed27d/vagrant_1.3.4_i686.deb
-  - sudo dpkg -i vagrant_1.3.4_i686.deb
+  - wget http://files.vagrantup.com/packages/db8e7a9c79b23264da129f55cf8569167fc22415/vagrant_1.3.3_i686.deb
+  - sudo dpkg -i vagrant_1.3.3_i686.deb
 script:
   - which vagrant
   - rvm use system --default
