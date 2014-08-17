@@ -6,8 +6,10 @@ install:
   - sudo apt-get update
   - sudo apt-get -y install linux-headers-generic
   - ls
-  - sudo apt-get install ruby vagrant virtualbox
+  - sudo apt-get install ruby virtualbox
   - VBoxManage -v
+  - wget http://files.vagrantup.com/packages/a40522f5fabccb9ddabad03d836e120ff5d14093/vagrant_1.3.5_i686.deb
+  - sudo dpkg -i vagrant_1.3.5_i686.deb
 script:
   - which vagrant
   - rvm use system --default
