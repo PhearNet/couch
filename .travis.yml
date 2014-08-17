@@ -8,7 +8,7 @@ install:
   - sudo apt-get update
   - sudo apt-get -y install linux-headers-generic
   - sudo apt-get -y install virtualbox-4.1
-  - sudo apt-get install virtualbox ruby vagrant
+  - sudo apt-get install ruby vagrant
   - VBoxManage -v
 script:
   - which vagrant
